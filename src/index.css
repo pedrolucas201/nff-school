@@ -37,20 +37,42 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.btn {
-  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md font-semibold shadow;
+
+.container-lg {
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-left: 1rem; 
+  padding-right: 1rem;
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem;
+  font-weight: 600; 
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.06); 
+  border-radius: 10px 0 10px 0;
+
+}
+
 .btn-primary {
-  @apply bg-[color:var(--brand1)] text-black;
+  background-color: var(--brand1);
+  color: white;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
+
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(255, 107, 45, 0.12);
 }
+
 .btn-ghost {
   @apply bg-transparent border border-white/10 text-white;
 }
+
 @keyframes pulse-cta {
   0% {
     transform: scale(1);
@@ -141,13 +163,56 @@ body {
 }
 
 .card-media {
-  @apply w-full h-44 md:h-52 overflow-hidden rounded-t-lg;
+  @apply w-full h-44 md:h-52 rounded-t-lg;
 }
 
 .card-body {
-  @apply p-4 flex flex-col flex-1;
+  @apply p-4 flex flex-col flex-1 items-center;
 }
 
 .card-cta {
   @apply mt-auto;
+}
+/* globals.css */
+
+/* wrapper que aplica scaleX / scaleY e translate sem gerir transform do Reveal */
+.scale-x-y {
+  --sx: 1;                 /* scaleX padrão */
+  --sy: calc(var(--sx) - 0.04); /* scaleY = scaleX - 0.04 (diferença fixa) */
+  --tx: 0px;               /* translateX (ajusta posição quando escalado) */
+
+  display: inline-block;
+  transform-origin: 100% 100%; /* origin-bottom-right */
+  transform: translateX(var(--tx)) scaleX(var(--sx)) scaleY(var(--sy));
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* tamanhos da imagem por breakpoint (apenas sugestões; ajuste conforme seu layout) */
+.scale-x-y img {
+  display: block;
+  width: auto;
+  max-width: 260px; /* mobile */
+  height: auto;
+}
+
+/* md (>=768px) */
+@media (min-width: 768px) {
+  .scale-x-y {
+    --sx: 1.25;   /* 1.25 => 1.21 (scaleY) */
+    --tx: 12px;   /* desloca um pouco para a direita quando maior */
+  }
+  .scale-x-y img {
+    max-width: 420px;
+  }
+}
+
+/* lg (>=1024px) */
+@media (min-width: 1024px) {
+  .scale-x-y {
+    --sx: 1.5;    /* 1.5 => 1.46 (scaleY) */
+    --tx: 24px;
+  }
+  .scale-x-y img {
+    max-width: 410px;
+  }
 }

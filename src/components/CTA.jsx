@@ -1,26 +1,191 @@
-import React, { useState } from 'react'
-import Reveal from './Reveal'
+// src/components/CTA.jsx
+import React, { useEffect, useRef, useState } from "react";
 
-export default function CTA(){
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState('idle')
-  async function handleSubmit(e){ e.preventDefault(); setStatus('sending'); try{ const res = await fetch('https://formspree.io/f/mayplkdo', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({email})}); if(!res.ok) throw new Error('fail'); setStatus('success'); setEmail(''); }catch(err){ setStatus('error') } }
+/**
+ * Props:
+ * - open: boolean
+ * - onClose: () => void
+ * - initialCourse: string (optional) -> prefills curso field
+ * - whatsappNumber: string -> destination number in international format WITHOUT "+" or separators, ex: "5581993259534"
+ */
+export default function CTA({ open, onClose, initialCourse = "", whatsappNumber }) {
+  const [name, setName] = useState("");
+  const [course, setCourse] = useState(initialCourse || "");
+  const [address, setAddress] = useState("");
+  const [phone, setPhone] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const firstInputRef = useRef(null);
+  const dialogRef = useRef(null);
+
+  useEffect(() => setCourse(initialCourse || ""), [initialCourse]);
+
+  useEffect(() => {
+    if (open) {
+      setTimeout(() => firstInputRef.current?.focus(), 50);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => (document.body.style.overflow = "");
+  }, [open]);
+
+  useEffect(() => {
+    function onKey(e) {
+      if (e.key === "Escape" && open) onClose();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
+
+  if (!open) return null;
+
+  function validate() {
+    if (!name.trim()) return "Preencha seu nome.";
+    if (!course.trim()) return "Selecione/insira o curso.";
+    if (!address.trim()) return "Preencha seu endereço.";
+    if (!phone.trim()) return "Preencha seu WhatsApp (ex: 11999998888).";
+    const digits = phone.replace(/\D/g, "");
+    if (digits.length < 8) return "Número de WhatsApp inválido.";
+    return null;
+  }
+
+  function buildMessage() {
+    return (
+      `Olá! Tenho interesse em um curso.\n\n` +
+      `Nome: ${name}\n` +
+      `Curso: ${course}\n` +
+      `Endereço: ${address}\n` +
+      `WhatsApp do cliente: ${phone}\n\n` +
+      `Origem: Site NFF`
+    );
+  }
+
+  async function onSubmit(e) {
+    e.preventDefault();
+    if (submitting) return;
+    const err = validate();
+    if (err) {
+      alert(err);
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const message = buildMessage();
+      const encoded = encodeURIComponent(message);
+      const target = String(whatsappNumber || "").replace(/\D/g, "");
+      if (!target) {
+        alert("Número do WhatsApp de atendimento não configurado.");
+        setSubmitting(false);
+        return;
+      }
+
+      const url = `https://wa.me/${target}?text=${encoded}`;
+      window.open(url, "_blank");
+      onClose();
+    } catch (err) {
+      console.error(err);
+      alert("Erro ao processar. Tente novamente.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  function onBackdropClick(e) {
+    if (e.target === dialogRef.current) onClose();
+  }
+
   return (
-    <section id="signup" className="py-12 fade-up" aria-labelledby="signup-heading">
-      <Reveal>
-      <div className="container">
-        <div className="bg-white/5 rounded-lg p-8 text-center">
-          <h3 id="signup-heading" className="text-2xl font-bold mb-3 text-white font-nasal">Inscreva-se e receba nossa trilha de estudos</h3>
-          <p className="text-white/80 mb-4">Material gratuito, atualizações e descontos exclusivos.</p>
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto form-inline gap-2" aria-label="Formulário de inscrição">
-            <input type="email" required placeholder="seu@exemplo.com" value={email} onChange={e=>setEmail(e.target.value)} className="flex-1 p-3 rounded bg-white/5" />
-            <button className="btn btn-primary" type="submit" style={{minWidth: '120px'}}>Quero receber</button>
+    <div
+      ref={dialogRef}
+      onMouseDown={onBackdropClick}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      aria-modal="true"
+      role="dialog"
+      aria-labelledby="cta-modal-title"
+    >
+      <div className="bg-white dark:bg-[#1f1f1f] rounded-lg w-full max-w-xl mx-auto shadow-xl overflow-hidden">
+        <div className="p-6">
+          <div className="flex items-start justify-between gap-4">
+            <h3 id="cta-modal-title" className="text-xl font-semibold">
+              Quero entender mais
+            </h3>
+            <button
+              onClick={onClose}
+              aria-label="Fechar"
+              className="text-gray-600 hover:text-gray-800"
+            >
+              ✕
+            </button>
+          </div>
+
+          <form onSubmit={onSubmit} className="mt-4 space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-400">Nome</label>
+              <input
+                ref={firstInputRef}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="mt-1 block w-full rounded-md border-gray-300 px-3 py-2 shadow-sm focus:ring-2 focus:ring-orange-400 text-black"
+                placeholder="Seu nome completo"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-400">Curso</label>
+              <input
+                value={course}
+                onChange={(e) => setCourse(e.target.value)}
+                className="mt-1 block w-full rounded-md border-gray-300 px-3 py-2 shadow-sm focus:ring-2 focus:ring-orange-400 text-black bg-gray-100 cursor-not-allowed"
+                placeholder="Curso desejado"
+                readOnly
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-400">Endereço</label>
+              <input
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                className="mt-1 block w-full rounded-md border-gray-300 px-3 py-2 shadow-sm focus:ring-2 focus:ring-orange-400 text-black"
+                placeholder="Rua, número, bairro, cidade"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-400">WhatsApp (do cliente)</label>
+              <input
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="mt-1 block w-full rounded-md border-gray-300 px-3 py-2 shadow-sm focus:ring-2 focus:ring-orange-400 text-black"
+                placeholder="Ex: 11999998888 (com DDD)"
+                required
+              />
+              <p className="text-xs text-gray-500 mt-1">Sem espaços ou símbolos obrigatórios — aceitaremos formatos comuns.</p>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-2">
+              <button
+                type="button"
+                onClick={onClose}
+                className="px-4 py-2 rounded-md border border-gray-300 text-sm"
+              >
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                disabled={submitting}
+                className="px-4 py-2 rounded-md bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 disabled:opacity-60"
+              >
+                {submitting ? "Abrindo WhatsApp..." : "Enviar e abrir WhatsApp"}
+              </button>
+            </div>
           </form>
-          {status==='success' && <p className="text-green-400 mt-4">Obrigado! Verifique seu e-mail.</p>}
-          {status==='error' && <p className="text-red-400 mt-4">Erro ao enviar.</p>}
         </div>
       </div>
-      </Reveal>
-    </section>
-  )
+    </div>
+  );
 }
