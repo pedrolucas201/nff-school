@@ -5,7 +5,7 @@ export default function Nav(){
   useEffect(() => { if (open) { document.body.style.overflow = 'hidden'; } else { document.body.style.overflow = ''; } return () => { document.body.style.overflow = ''; } }, [open]);
   function handleLinkClick() { setOpen(false); }
   return (
-    <nav className="inset-x-0 top-0 z-50">
+    <nav className="inset-x-0 top-0 z-50 w-full bg-black">
       <div className="container flex items-center justify-between py-4">
         <a href="#" className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-[color:var(--brand2)] flex items-center justify-center font-bold">NFF</div>
