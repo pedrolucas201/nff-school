@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import logonff from '../assets/logo-nff.png'
 
-export default function Nav(){
+export default function Nav() {
   const [open, setOpen] = useState(false);
   useEffect(() => { if (open) { document.body.style.overflow = 'hidden'; } else { document.body.style.overflow = ''; } return () => { document.body.style.overflow = ''; } }, [open]);
   function handleLinkClick() { setOpen(false); }
   return (
-    <nav className="inset-x-0 top-0 z-50 w-full bg-black">
+    <nav className="inset-x-0 top-0 z-50 w-full bg-black font-nasal">
       <div className="container flex items-center justify-between py-4">
         <a href="#" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[color:var(--brand2)] flex items-center justify-center font-bold">NFF</div>
-          <span className="font-semibold">NFF Escola</span>
+          <div className="w-20 h-10 rounded-full flex items-center justify-center font-bold bg-cover bg-no-repeat bg-right"
+            style={{
+              backgroundImage: `url(${logonff})`,
+            }}  >
+
+          </div>
         </a>
         <div className="hidden md:flex items-center gap-6">
           <a href="#courses" className="text-sm" onClick={handleLinkClick}>Cursos</a>
@@ -20,18 +25,18 @@ export default function Nav(){
         <div className="md:hidden">
           <button aria-label="Abrir menu" onClick={() => setOpen(v => !v)} className="p-2 rounded-md btn-ghost">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>
       </div>
-      <div aria-hidden={!open} className={`fixed inset-0 z-40 ${open ? 'opacity-100' : 'pointer-events-none opacity-0' }`}>
+      <div aria-hidden={!open} className={`fixed inset-0 z-40 ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}>
         <div className={`absolute inset-0 bg-black/60 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`} onClick={() => setOpen(false)}></div>
         <div className={`absolute top-0 right-0 w-11/12 max-w-xs h-full bg-gradient-to-b from-black/80 to-black/90 p-6 transform transition-all ${open ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[color:var(--brand2)] flex items-center justify-center font-bold">AN</div>
-              <span className="font-semibold">ANFF Escola</span>
+              <span className="font-semibold">NFF Escola</span>
             </div>
             <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="p-2 rounded-md btn-ghost">✕</button>
           </div>
