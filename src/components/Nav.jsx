@@ -20,7 +20,7 @@ export default function Nav() {
           <a href="#courses" className="text-sm" onClick={handleLinkClick}>Cursos</a>
           <a href="#about" className="text-sm" onClick={handleLinkClick}>Sobre</a>
           <a href="#courses" className="text-sm" onClick={handleLinkClick}>Contato</a>
-          <a href="#signup" className="btn btn-primary">Quero Acessar</a>
+          <a href="#section7" className="btn btn-primary">Quero Acessar</a>
         </div>
         <div className="md:hidden">
           <button aria-label="Abrir menu" onClick={() => setOpen(v => !v)} className="p-2 rounded-md btn-ghost">
@@ -44,7 +44,7 @@ export default function Nav() {
             <a href="#courses" onClick={handleLinkClick} className="text-lg">Cursos</a>
             <a href="#about" onClick={handleLinkClick} className="text-lg">Sobre</a>
             <a href="#courses" onClick={handleLinkClick} className="text-lg">Contato</a>
-            <a href="#signup" onClick={handleLinkClick} className="btn btn-primary mt-4">Quero Acessar</a>
+            <a href="#section7" onClick={handleLinkClick} className="btn btn-primary mt-4">Quero Acessar</a>
           </nav>
         </div>
       </div>
