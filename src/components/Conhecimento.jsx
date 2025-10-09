@@ -54,7 +54,7 @@ export default function Conhecimento() {
           {/* coluna esquerda: título + grade */}
           <div className="w-full lg:w-7/12">
             <div className="bg-transparent rounded-r-2xl py-2 lg:py-6 px-2 sm:px-4 lg:px-0">
-              <h2 className="font-nasal text-center text-black text-[20px] sm:text-center sm:text-[30px] md:text-left lg:text-left lg:text-[40px] font-extrabold leading-tight mb-8">
+              <h2 className="font-nasal text-center text-black text-[22px] sm:text-center sm:text-[30px] md:text-left lg:text-left lg:text-[40px] font-extrabold leading-tight mb-8">
                 {/* primeira linha */}
                 Desde o conhecimento
                 {/* segunda linha forçada em todos os tamanhos; "estamos com você" em laranja */}
@@ -81,12 +81,12 @@ export default function Conhecimento() {
                     {/* box do ícone: usa tamanhos responsivos */}
                     <div
                       className="flex items-center justify-center bg-[#4b1f1f] rounded-tl-[20px] rounded-br-[20px] shadow-md
-                                    w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 transform transition-transform duration-200 hover:scale-105"
+                                    w-20 h-20 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 transform transition-transform duration-200 hover:scale-105"
                     >
                       <img
                         src={it.src}
                         alt={it.label}
-                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain"
+                        className="w-14 h-14 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain"
                       />
                     </div>
 

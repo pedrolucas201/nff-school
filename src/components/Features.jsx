@@ -48,21 +48,21 @@ export default function Features() {
               <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col items-center text-center space-y-3 flex-1">
                   <div className="w-20 h-20 flex items-center justify-center">
-                    <img src={iconmentalidade} alt="Ícone mentalidade" className="w-14 h-14 object-contain" />
+                    <img src={iconmentalidade} alt="Ícone mentalidade" className="w-20 h-20 object-contain" />
                   </div>
                   <span className="font-nasal text-sm sm:text-base font-semibold">Mentalidade</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-3 flex-1">
                   <div className="w-20 h-20 flex items-center justify-center">
-                    <img src={iconbolsa} alt="Ícone bolsa de valores" className="w-14 h-14 object-contain" />
+                    <img src={iconbolsa} alt="Ícone bolsa de valores" className="w-20 h-20 object-contain" />
                   </div>
                   <span className="font-nasal text-sm sm:text-base font-semibold">Bolsa de Valores</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-3 flex-1">
                   <div className="w-20 h-20 flex items-center justify-center">
-                    <img src={icontrader} alt="Ícone day trader" className="w-14 h-14 object-contain" />
+                    <img src={icontrader} alt="Ícone day trader" className="w-20 h-20 object-contain" />
                   </div>
                   <span className="font-nasal text-sm sm:text-base font-semibold">Day Trader</span>
                 </div>
