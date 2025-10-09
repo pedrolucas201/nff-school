@@ -107,7 +107,7 @@ export default function CTA({ open, onClose, initialCourse = "", whatsappNumber 
       <div className="bg-white dark:bg-[#1f1f1f] rounded-lg w-full max-w-xl mx-auto shadow-xl overflow-hidden">
         <div className="p-6">
           <div className="flex items-start justify-between gap-4">
-            <h3 id="cta-modal-title" className="text-xl font-semibold">
+            <h3 id="cta-modal-title" className="font-nasal text-xl font-semibold">
               Quero entender mais
             </h3>
             <button
@@ -121,7 +121,7 @@ export default function CTA({ open, onClose, initialCourse = "", whatsappNumber 
 
           <form onSubmit={onSubmit} className="mt-4 space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-400">Nome</label>
+              <label className="block text-sm font-medium text-gray-400 font-nasal">Nome</label>
               <input
                 ref={firstInputRef}
                 value={name}
@@ -133,7 +133,7 @@ export default function CTA({ open, onClose, initialCourse = "", whatsappNumber 
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-400">Curso</label>
+              <label className="block text-sm font-medium text-gray-400 font-nasal">Curso</label>
               <input
                 value={course}
                 onChange={(e) => setCourse(e.target.value)}
@@ -145,7 +145,7 @@ export default function CTA({ open, onClose, initialCourse = "", whatsappNumber 
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-400">Endereço</label>
+              <label className="block text-sm font-medium text-gray-400 font-nasal">Endereço</label>
               <input
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
@@ -156,7 +156,7 @@ export default function CTA({ open, onClose, initialCourse = "", whatsappNumber 
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-400">WhatsApp (do cliente)</label>
+              <label className="block text-sm font-medium text-gray-400 font-nasal">WhatsApp (do cliente)</label>
               <input
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -164,21 +164,21 @@ export default function CTA({ open, onClose, initialCourse = "", whatsappNumber 
                 placeholder="Ex: 11999998888 (com DDD)"
                 required
               />
-              <p className="text-xs text-gray-500 mt-1">Sem espaços ou símbolos obrigatórios — aceitaremos formatos comuns.</p>
+              <p className="text-xs text-gray-500 mt-1 font-nasal">Sem espaços ou símbolos obrigatórios — aceitaremos formatos comuns.</p>
             </div>
 
             <div className="flex items-center justify-end gap-3 pt-2">
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 rounded-md border border-gray-300 text-sm"
+                className="px-4 py-2 rounded-md border border-gray-300 text-sm font-nasal"
               >
                 Cancelar
               </button>
               <button
                 type="submit"
                 disabled={submitting}
-                className="px-4 py-2 rounded-md bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 disabled:opacity-60"
+                className="px-4 py-2 rounded-md bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 disabled:opacity-60 font-nasal"
               >
                 {submitting ? "Abrindo WhatsApp..." : "Enviar e abrir WhatsApp"}
               </button>

@@ -19,7 +19,7 @@ export default function Nav() {
         <div className="hidden md:flex items-center gap-6">
           <a href="#courses" className="text-sm" onClick={handleLinkClick}>Cursos</a>
           <a href="#about" className="text-sm" onClick={handleLinkClick}>Sobre</a>
-          <a href="#contact" className="text-sm" onClick={handleLinkClick}>Contato</a>
+          <a href="#courses" className="text-sm" onClick={handleLinkClick}>Contato</a>
           <a href="#signup" className="btn btn-primary">Quero Acessar</a>
         </div>
         <div className="md:hidden">
@@ -43,11 +43,12 @@ export default function Nav() {
           <nav className="flex flex-col gap-4">
             <a href="#courses" onClick={handleLinkClick} className="text-lg">Cursos</a>
             <a href="#about" onClick={handleLinkClick} className="text-lg">Sobre</a>
-            <a href="#contact" onClick={handleLinkClick} className="text-lg">Contato</a>
+            <a href="#courses" onClick={handleLinkClick} className="text-lg">Contato</a>
             <a href="#signup" onClick={handleLinkClick} className="btn btn-primary mt-4">Quero Acessar</a>
           </nav>
         </div>
       </div>
     </nav>
+    
   )
 }

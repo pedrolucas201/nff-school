@@ -6,6 +6,9 @@ import Features from './components/Features'
 import CoursesGrid from './components/CoursesGrid'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import Conhecimento from './components/Conhecimento'
+import Section6 from './components/Section6'
+import Section7 from './components/Section7'
 
 export default function App(){
   return (
@@ -15,7 +18,10 @@ export default function App(){
         <Hero />
         <About />
         <Features />
+        <Conhecimento />
         <CoursesGrid />
+        <Section6 />
+        <Section7 />
         <CTA />
       </main>
       <Footer />

@@ -8,7 +8,7 @@ import iconmentalidade from '../assets/mentalidade-icon.png'
 export default function Features() {
   return (
     <section
-      id="about"
+      id="features"
       aria-label="Imagem de destaque da NFF Escola de Investimento"
       className="relative w-full overflow-hidden "
       style={{
@@ -41,7 +41,7 @@ export default function Features() {
               role="group"
               aria-label="Serviços oferecidos"
             >
-              <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-8">
+              <h2 className="font-nasal text-center text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-8">
                 Te levamos ao novo patamar
               </h2>
 
@@ -50,21 +50,21 @@ export default function Features() {
                   <div className="w-20 h-20 flex items-center justify-center">
                     <img src={iconmentalidade} alt="Ícone mentalidade" className="w-14 h-14 object-contain" />
                   </div>
-                  <span className="text-sm sm:text-base font-semibold">Mentalidade</span>
+                  <span className="font-nasal text-sm sm:text-base font-semibold">Mentalidade</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-3 flex-1">
                   <div className="w-20 h-20 flex items-center justify-center">
                     <img src={iconbolsa} alt="Ícone bolsa de valores" className="w-14 h-14 object-contain" />
                   </div>
-                  <span className="text-sm sm:text-base font-semibold">Bolsa de Valores</span>
+                  <span className="font-nasal text-sm sm:text-base font-semibold">Bolsa de Valores</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-3 flex-1">
                   <div className="w-20 h-20 flex items-center justify-center">
                     <img src={icontrader} alt="Ícone day trader" className="w-14 h-14 object-contain" />
                   </div>
-                  <span className="text-sm sm:text-base font-semibold">Day Trader</span>
+                  <span className="font-nasal text-sm sm:text-base font-semibold">Day Trader</span>
                 </div>
               </div>
             </div>
