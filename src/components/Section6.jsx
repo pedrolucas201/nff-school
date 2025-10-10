@@ -1,7 +1,7 @@
 // components/About.jsx
 import React from "react";
 import Reveal from "./Reveal";
-import bgsection from "../assets/bg-section6.png";
+import bgsection from "../assets/bg-section6.svg";
 
 export default function Section6() {
   return (

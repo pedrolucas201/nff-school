@@ -1,7 +1,7 @@
 // components/About.jsx
 import React from "react";
 import Reveal from "./Reveal";
-import bgabout from "../assets/bg-about.png";
+import bgabout from "../assets/bg-about.svg";
 
 export default function About() {
   return (
