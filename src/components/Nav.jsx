@@ -32,10 +32,10 @@ export default function Nav() {
       </div>
       <div aria-hidden={!open} className={`fixed inset-0 z-40 ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}>
         <div className={`absolute inset-0 bg-black/60 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`} onClick={() => setOpen(false)}></div>
-        <div className={`absolute top-0 right-0 w-11/12 max-w-xs h-full bg-gradient-to-b from-black/80 to-black/90 p-6 transform transition-all ${open ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={`absolute top-0 right-0 w-11/12 max-w-[15rem] h-full bg-gradient-to-b from-black/80 to-black/90 p-6 transform transition-all ${open ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[color:var(--brand2)] flex items-center justify-center font-bold">AN</div>
+              <div className="w-12 h-12 rounded-full bg-[color:var(--brand2)] flex items-center justify-center font-bold">NFF</div>
               <span className="font-semibold">NFF Escola</span>
             </div>
             <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="p-2 rounded-md btn-ghost">✕</button>

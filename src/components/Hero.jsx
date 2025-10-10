@@ -44,7 +44,7 @@ export default function Hero() {
 
                 <h1
                   className={`text-white font-nasal font-extrabold leading-tight tracking-tight text-left
-                              text-[22px] sm:text-[28px] md:text-[40px] lg:text-[50px]`}
+                              text-[22px] sm:text-[27px] md:text-[38px] lg:text-[49px]`}
                 >
                   O conhecimento <br />
                   abre portas <br />
