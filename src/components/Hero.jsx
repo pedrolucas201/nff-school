@@ -13,7 +13,7 @@ export default function Hero() {
         alt="Hero NFF Escola"
         className={`
           absolute inset-0 w-full h-full object-cover
-          object-[65%_center] sm:object-[60%_center] md:object-[50%_center] lg:object-[40%_center] xl:object-[50%_center]
+          object-[65%_center] sm:object-[60%_center] md:object-[60%_center] lg:object-[70%_center] xl:object-[50%_center]
           z-0 filter brightness-95
         `}
         style={{ opacity: 0.3 }}
