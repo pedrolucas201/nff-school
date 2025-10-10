@@ -54,7 +54,7 @@ export default function Conhecimento() {
           {/* coluna esquerda: título + grade */}
           <div className="w-full lg:w-7/12">
             <div className="bg-transparent rounded-r-2xl py-2 lg:py-6 px-2 sm:px-4 lg:px-0">
-              <h2 className="font-nasal text-center text-black text-[22px] sm:text-center sm:text-[30px] md:text-left lg:text-left lg:text-[40px] font-extrabold leading-tight mb-8">
+              <h2 className="font-nasal text-center text-black text-[21px] sm:text-center sm:text-[30px] md:text-left lg:text-left lg:text-[40px] font-extrabold leading-tight mb-8">
                 {/* primeira linha */}
                 Desde o conhecimento
                 {/* segunda linha forçada em todos os tamanhos; "estamos com você" em laranja */}

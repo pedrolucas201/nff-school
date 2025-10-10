@@ -71,7 +71,7 @@ export default function CoursesGrid() {
               return (
                 <Reveal key={idx} className={isLast ? "sm:col-span-2" : ""}>
                   <article
-                    className={`course-card h-full rounded-lg py-10 flex ${
+                    className={`course-card h-full rounded-lg pt-10 flex ${
                       isLast ? "mb-10 flex-col sm:flex-row items-center sm:items-stretch text-left rounded-lg shadow-lg" : "flex-col"
                     }`}
                   >
@@ -113,7 +113,7 @@ export default function CoursesGrid() {
                         <p className="text-[18px] text-sm font-normal text-white/80 mb-4">{c.desc}</p>
                       </div>
 
-                      <div className="mt-2 pt-0">
+                      <div className="w-[250px] md:w-[300px]">
                         <button
                           onClick={() => openForCourse(c.title)}
                           className="w-full btn btn-primary text-sm"

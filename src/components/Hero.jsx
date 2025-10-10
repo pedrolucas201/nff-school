@@ -11,11 +11,7 @@ export default function Hero() {
       <img
         src={hero}
         alt="Hero NFF Escola"
-        className={`
-          absolute inset-0 w-full h-full object-cover
-          object-[65%_center] sm:object-[60%_center] md:object-[60%_center] lg:object-[70%_center] xl:object-[50%_center]
-          z-0 filter brightness-95
-        `}
+        className="absolute inset-0 w-full h-full object-cover object-[65%_center] sm:object-[60%_center] md:object-[60%_center] lg:object-[70%_center] xl:object-[50%_center] z-0 filter brightness-95"
         style={{ opacity: 0.3 }}
       />
 
@@ -28,51 +24,45 @@ export default function Hero() {
       />
 
       {/* conteúdo */}
-      <div className="absolute inset-0 flex items-center z-20">
-        <div className="container mx-auto px-6 py-10 md:py-16 lg:py-24">
-          {/* Ajustei os max-w para dar um pouco mais de espaço em mobile */}
-          <div className="max-w-[14rem] sm:max-w-[17rem] md:max-w-[21rem] lg:max-w-[27rem]">
-            <Reveal>
-              <div className="flex flex-col items-start gap-4">
-                <img
-                  src={logonff}
-                  alt="Logo NFF"
-                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
-                />
+      <div className="absolute inset-0 flex items-center justify-center z-20">
+        <div className="container mx-auto px-6 flex flex-col items-start text-left md:items-start md:text-left">
+          <Reveal>
+            <img
+              src={logonff}
+              alt="Logo NFF"
+              className="h-28 sm:h-32 md:h-36 lg:h-40 w-auto object-contain mb-4"
+            />
 
-                <h1
-                  className={`text-white font-nasal font-extrabold leading-tight tracking-tight text-left
-                              text-[26px] sm:text-[32px] md:text-[40px] lg:text-[49px]`}
-                >
-                  {/* evita quebra entre 'O' e 'conhecimento' */}
-                  <span className="whitespace-nowrap">O&nbsp;conhecimento</span> <br />
-                  abre portas <br />
-                  para um{" "}
-                  <span className="underline decoration-brand1 decoration-[3px] underline-offset-4">
-                    futuro
-                  </span>{" "}
-                  <br />
-                  <span className="underline decoration-brand1 decoration-[3px] underline-offset-4">
-                    extraordinário.
-                  </span>
-                </h1>
-              </div>
-            </Reveal>
+            <h1
+              className={`text-white font-nasal font-extrabold leading-tight tracking-tight whitespace-pre-line
+                          text-[40px] sm:text-[36px] md:text-[44px] lg:text-[52px]`}
+            >
+              O conhecimento{"\n"}
+              abre portas{"\n"}
+              para um{" "}
+              <span className="underline decoration-brand1 decoration-[3px] underline-offset-4">
+                futuro
+              </span>
+              {"\n"}
+              <span className="underline decoration-brand1 decoration-[3px] underline-offset-4">
+                extraordinário.
+              </span>
+            </h1>
+          </Reveal>
 
-            <div className="mt-4 w-full">
-              <a
-                href="#courses"
-                className="btn btn-primary block mx-0 px-8 py-4 text-[12px] sm:text-[14px] md:text-[20px] lg:text-[22px] text-center"
-                aria-label="Quero mudar meu futuro"
-              >
-                Quero mudar meu futuro
-              </a>
-            </div>
-          </div>
+          <a
+            href="#courses"
+            className="mt-6 btn btn-primary px-10 py-4 text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px]"
+          >
+            Quero mudar meu futuro
+          </a>
         </div>
       </div>
 
-      <div className="absolute left-0 right-0 bottom-0 pointer-events-none z-20" aria-hidden="true">
+      <div
+        className="absolute left-0 right-0 bottom-0 pointer-events-none z-20"
+        aria-hidden="true"
+      >
         <svg viewBox="0 0 1440 60" className="w-full h-6" preserveAspectRatio="none">
           <path d="M0 30 C360 0, 1080 60, 1440 30 L1440 60 L0 60 Z" fill="rgba(0,0,0,0.16)" />
         </svg>

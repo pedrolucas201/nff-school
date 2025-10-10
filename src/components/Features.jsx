@@ -20,7 +20,7 @@ export default function Features() {
     >
       <div className="absolute inset-0 bg-[rgba(255,110,30,0.2)] pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-10 sm:py-14 lg:py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-5 sm:py-14 lg:py-20">
         <div className="flex flex-col lg:flex-row items-center gap-[14px]">
 
           <div className="w-full lg:w-5/12">
@@ -37,11 +37,11 @@ export default function Features() {
 
           <div className="w-full sm:w-100 md:w-10/12 lg:w-7/12">
             <div
-              className="rounded-xl h-full relative lg:-ml-8 lg:pl-8 z-20 bg-gradient-to-r from-[rgba(255,140,60,0.95)] to-[rgba(255,110,30,0.88)] backdrop-blur-sm sm:rounded-none md:rounded-none lg:rounded-none lg:rounded-r-2xl sm:rounded-r-2xl md:rounded-r-2xl py-10 px-6 sm:px-10 shadow-xl flex flex-col items-center text-white"
+              className="rounded-xl h-full relative lg:-ml-8 lg:pl-8 z-20 bg-gradient-to-r from-[rgba(255,140,60,0.95)] to-[rgba(255,110,30,0.88)] backdrop-blur-sm sm:rounded-none md:rounded-none lg:rounded-none lg:rounded-r-2xl sm:rounded-r-2xl md:rounded-r-2xl py-5 md:py-10 px-6 sm:px-10 shadow-xl flex flex-col items-center text-white"
               role="group"
               aria-label="Serviços oferecidos"
             >
-              <h2 className="font-nasal text-center text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-8">
+              <h2 className="font-nasal text-center text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight sm:mb-8">
                 Te levamos ao novo patamar
               </h2>
 
