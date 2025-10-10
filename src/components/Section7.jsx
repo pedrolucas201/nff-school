@@ -1,7 +1,7 @@
 // components/Section7.jsx
 import React from "react";
 import Reveal from "./Reveal";
-import bgsection from "../assets/bg-section7.png";
+import bgsection from "../assets/bg-section7.svg";
 import form from "../assets/form-page.png";
 
 export default function Section7() {
@@ -41,7 +41,7 @@ export default function Section7() {
           <img
             src={form}
             alt="Formulário"
-            className="w-[80%] sm:w-[70%] lg:w-[90%] max-w-[500px] bg-red p-4 rounded-2xl shadow-2xl object-contain"
+            className="w-[100%] sm:w-[100%] lg:w-[100%] max-w-xl bg-red px-4 rounded-lg shadow-2xl object-contain"
           />
         </div>
       </div>

@@ -35,9 +35,9 @@ export default function Features() {
             </div>
           </div>
 
-          <div className="w-full lg:w-7/12">
+          <div className="w-full sm:w-100 md:w-10/12 lg:w-7/12">
             <div
-              className="h-full relative lg:-ml-8 lg:pl-8 z-20 bg-gradient-to-r from-[rgba(255,140,60,0.95)] to-[rgba(255,110,30,0.88)] backdrop-blur-sm rounded-r-2xl py-10 px-6 sm:px-10 shadow-xl flex flex-col items-center text-white"
+              className="rounded-xl h-full relative lg:-ml-8 lg:pl-8 z-20 bg-gradient-to-r from-[rgba(255,140,60,0.95)] to-[rgba(255,110,30,0.88)] backdrop-blur-sm sm:rounded-none md:rounded-none lg:rounded-none lg:rounded-r-2xl sm:rounded-r-2xl md:rounded-r-2xl py-10 px-6 sm:px-10 shadow-xl flex flex-col items-center text-white"
               role="group"
               aria-label="Serviços oferecidos"
             >
@@ -45,24 +45,24 @@ export default function Features() {
                 Te levamos ao novo patamar
               </h2>
 
-              <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="w-full flex lg:flex-row sm:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col items-center text-center space-y-3 flex-1">
                   <div className="w-20 h-20 flex items-center justify-center">
-                    <img src={iconmentalidade} alt="Ícone mentalidade" className="w-20 h-20 object-contain" />
+                    <img src={iconmentalidade} alt="Ícone mentalidade" className="w-12 h-12 sm:w-20 sm:h-20 md:w-20 md:h-20 lg:w-20 lg:h-20 object-contain" />
                   </div>
                   <span className="font-nasal text-sm sm:text-base font-semibold">Mentalidade</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-3 flex-1">
                   <div className="w-20 h-20 flex items-center justify-center">
-                    <img src={iconbolsa} alt="Ícone bolsa de valores" className="w-20 h-20 object-contain" />
+                    <img src={iconbolsa} alt="Ícone bolsa de valores" className="w-12 h-12 sm:w-20 sm:h-20 md:w-20 md:h-20 lg:w-20 lg:h-20 object-contain" />
                   </div>
                   <span className="font-nasal text-sm sm:text-base font-semibold">Bolsa de Valores</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-3 flex-1">
                   <div className="w-20 h-20 flex items-center justify-center">
-                    <img src={icontrader} alt="Ícone day trader" className="w-20 h-20 object-contain" />
+                    <img src={icontrader} alt="Ícone day trader" className="w-12 h-12 sm:w-20 sm:h-20 md:w-20 md:h-20 lg:w-20 lg:h-20 object-contain" />
                   </div>
                   <span className="font-nasal text-sm sm:text-base font-semibold">Day Trader</span>
                 </div>

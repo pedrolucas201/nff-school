@@ -6,35 +6,67 @@ export default function Hero() {
   return (
     <header
       aria-label="Hero - NFF Escola"
-      className="relative w-full h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-hidden"
+      className="relative w-full h-screen overflow-hidden"
     >
+      {/* background image - você já ajustou o foco */}
       <img
         src={hero}
         alt="Hero NFF Escola"
-        className=" w-full h-full object-cover object-[70%_center] md:object-[70%_center]"
+        className={`
+          absolute inset-0 w-full h-full object-cover
+          object-[65%_center] sm:object-[60%_center] md:object-[50%_center] lg:object-[40%_center] xl:object-[50%_center]
+          z-0 filter brightness-95
+        `}
+        style={{ opacity: 0.3 }}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-[#b75841]/75 via-[#db3915]/60 to-[#312d2b]/45"></div>
-      <div className="absolute inset-0 flex items-center">
-        <div className="container mx-auto px-6 py-12 md:py-20 lg:py-28">
-          <div className="min-w-[16rem] w-[16rem] sm:w-full sm:max-w-[22rem] md:max-w-[22rem] lg:max-w-[28rem]">
+      {/* overlay */}
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(183,88,65,0.30) 0%, rgba(0,0,0,0.36) 30%, rgba(49,45,43,0.22) 100%)",
+        }}
+      />
+
+      {/* conteúdo */}
+      <div className="absolute inset-0 flex items-center z-20">
+        <div className="container mx-auto px-6 py-10 md:py-16 lg:py-24">
+          {/* LIMITE de largura do bloco que controla texto + botão */}
+          <div className="max-w-[12rem] sm:max-w-[15rem] md:max-w-[21rem] lg:max-w-[27rem]">
             <Reveal>
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start gap-4">
                 <img
                   src={logonff}
                   alt="Logo NFF"
-                  className="h-[6rem] sm:h-[8rem] md:h-[12rem] w-auto object-contain"
+                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
                 />
-                <h1 className="text-[29px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-extrabold leading-tight text-white font-nasal">
-                  O conhecimento abre portas para um{" "}
-                  <span className="font-nasal underline decoration-brand1 text-white block lg:inline">
-                     futuro extraordinário.
+
+                <h1
+                  className={`text-white font-nasal font-extrabold leading-tight tracking-tight text-left
+                              text-[22px] sm:text-[28px] md:text-[40px] lg:text-[50px]`}
+                >
+                  O conhecimento <br />
+                  abre portas <br />
+                  para um{" "}
+                  <span className="underline decoration-brand1 decoration-[3px] underline-offset-4">
+                    futuro
+                  </span>{" "}
+                  <br />
+                  <span className="underline decoration-brand1 decoration-[3px] underline-offset-4">
+                    extraordinário.
                   </span>
                 </h1>
               </div>
             </Reveal>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="#courses" className="btn btn-primary w-auto sm:w-full">
+
+            {/* CTA alinhado à esquerda e com largura igual ao bloco de texto */}
+            <div className="mt-4 w-full">
+              <a
+                href="#courses"
+                className="btn btn-primary block mx-0 px-8 py-4 text-[12px] sm:text-[14px] md:text-[20px] lg:text-[22px] text-center"
+                aria-label="Quero mudar meu futuro"
+              >
                 Quero mudar meu futuro
               </a>
             </div>
@@ -42,16 +74,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute left-0 right-0 bottom-0">
-        <svg
-          viewBox="0 0 1440 60"
-          className="w-full h-6"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 30 C360 0, 1080 60, 1440 30 L1440 60 L0 60 Z"
-            fill="rgba(0,0,0,0.16)"
-          />
+      {/* decorative bottom SVG */}
+      <div className="absolute left-0 right-0 bottom-0 pointer-events-none z-20" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" className="w-full h-6" preserveAspectRatio="none">
+          <path d="M0 30 C360 0, 1080 60, 1440 30 L1440 60 L0 60 Z" fill="rgba(0,0,0,0.16)" />
         </svg>
       </div>
     </header>

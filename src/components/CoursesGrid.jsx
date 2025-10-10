@@ -70,7 +70,6 @@ export default function CoursesGrid() {
 
               return (
                 <Reveal key={idx} className={isLast ? "sm:col-span-2" : ""}>
-                  {/* 🔽 Alteração mínima aqui */}
                   <article
                     className={`course-card h-full rounded-lg py-10 flex ${
                       isLast ? "mb-10 flex-col sm:flex-row items-center sm:items-stretch text-left rounded-lg shadow-lg" : "flex-col"
@@ -80,7 +79,7 @@ export default function CoursesGrid() {
                     <div
                       className={`card-media flex justify-center ${
                         isLast
-                          ? "sm:w-1/2 items-center justify-center rounded-lg py-4 px-4"
+                          ? "sm:w-1/2 flex-none items-center justify-center rounded-lg py-4 px-4"
                           : "w-full flex-none flex items-center justify-center py-4 px-4"
                       }`}
                     >
@@ -90,8 +89,8 @@ export default function CoursesGrid() {
                         alt={c.title}
                         className={`rounded-lg object-contain h-auto ${
                           isLast
-                            ? "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[200px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px]"
-                            : "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[200px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px]"
+                            ? "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px]"
+                            : "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px]"
                         }`}
                         loading="lazy"
                       />
@@ -103,21 +102,21 @@ export default function CoursesGrid() {
                         isLast ? "sm:pl-10 sm:text-left text-center" : ""
                       }`}
                     >
-                      <div>
+                      <div className="">
                         <h3
-                          className={`text-white text-xl font-semibold mb-2 leading-snug font-nasal ${
-                            isLast ? "pt-14 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-14"
+                          className={`text-white text-2xl font-semibold mb-2 leading-snug font-nasal ${
+                            isLast ? "pt-14 lg:pt-14 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-14 lg:pt-14"
                           }`}
                         >
                           {c.title}
                         </h3>
-                        <p className="text-sm text-white/80 mb-4">{c.desc}</p>
+                        <p className="text-[18px] text-sm font-normal text-white/80 mb-4">{c.desc}</p>
                       </div>
 
-                      <div className="mt-4">
+                      <div className="mt-2 pt-0">
                         <button
                           onClick={() => openForCourse(c.title)}
-                          className="btn btn-primary text-sm"
+                          className="w-full btn btn-primary text-sm"
                           aria-label={`Quero entender mais sobre ${c.title}`}
                         >
                           Quero entender mais
