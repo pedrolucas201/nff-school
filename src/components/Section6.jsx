@@ -8,7 +8,7 @@ export default function Section6() {
     <section
       id="Section6"
       aria-label="Transforme a sua vida com a NFF Escola de Investimento"
-      className="w-full bg-cover bg-no-repeat bg-right py-20 mt-[8px]"
+      className="w-full bg-cover bg-no-repeat bg-right py-20"
       style={{
         backgroundImage: `url(${bgsection})`,
       }}

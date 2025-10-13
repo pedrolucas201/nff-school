@@ -10,7 +10,7 @@ export default function Features() {
     <section
       id="features"
       aria-label="Imagem de destaque da NFF Escola de Investimento"
-      className="relative w-full overflow-hidden "
+      className="relative w-full overflow-hidden bg-cover bg-no-repeat bg-center" 
       style={{
         backgroundImage: `url('${section}')`,
         backgroundRepeat: 'no-repeat',

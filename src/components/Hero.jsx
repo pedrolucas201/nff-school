@@ -52,20 +52,11 @@ export default function Hero() {
 
           <a
             href="#courses"
-            className="mt-6 btn btn-primary px-10 py-4 text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px]"
+            className="w-[320px] sm:w-[300px] md:w-[365px] lg:w-[440px] mt-6 btn btn-primary px-10 py-4 text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px]"
           >
             Quero mudar meu futuro
           </a>
         </div>
-      </div>
-
-      <div
-        className="absolute left-0 right-0 bottom-0 pointer-events-none z-20"
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 1440 60" className="w-full h-6" preserveAspectRatio="none">
-          <path d="M0 30 C360 0, 1080 60, 1440 30 L1440 60 L0 60 Z" fill="rgba(0,0,0,0.16)" />
-        </svg>
       </div>
     </header>
   );

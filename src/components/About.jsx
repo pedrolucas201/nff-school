@@ -8,7 +8,7 @@ export default function About() {
     <section
       id="about"
       aria-label="Sobre a NFF Escola de Investimento"
-      className="w-full bg-cover bg-no-repeat bg-right py-10 mt-[8px]"
+      className="w-full bg-cover bg-no-repeat bg-right py-10"
       style={{
         backgroundImage: `url(${bgabout})`,
       }}

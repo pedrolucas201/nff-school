@@ -89,7 +89,7 @@ export default function CoursesGrid() {
                         alt={c.title}
                         className={`rounded-lg object-contain h-auto ${
                           isLast
-                            ? "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px]"
+                            ? "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px] bg-black"
                             : "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px]"
                         }`}
                         loading="lazy"
@@ -105,15 +105,17 @@ export default function CoursesGrid() {
                       <div className="">
                         <h3
                           className={`text-white text-2xl font-semibold mb-2 leading-snug font-nasal ${
-                            isLast ? "pt-14 lg:pt-14 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-14 lg:pt-14"
+                            isLast ? "pt-14 lg:pt-8 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-14 lg:pt-14"
                           }`}
                         >
                           {c.title}
                         </h3>
-                        <p className="text-[18px] text-sm font-normal text-white/80 mb-4">{c.desc}</p>
+                        <p className="text-[18px] text-sm font-normal text-white/80">{c.desc}</p>
                       </div>
 
-                      <div className="w-[250px] md:w-[300px]">
+                      <div className={`w-[250px] md:w-[300px] ${
+                            isLast ? "lg:pt-8 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-6 lg:pt-8"
+                          }`}>
                         <button
                           onClick={() => openForCourse(c.title)}
                           className="w-full btn btn-primary text-sm"
