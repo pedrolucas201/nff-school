@@ -7,8 +7,8 @@ import t11 from "/src/assets/educacao-financeira-infantil.svg";
 import t12 from "/src/assets/educacao-financeira-infantil.svg";
 import t21 from "/src/assets/day-trader.svg";
 import t22 from "/src/assets/day-trader.svg";
-import t31 from "/src/assets/mercado-financeiro.svg";
-import t32 from "/src/assets/mercado-financeiro.svg";
+import t31 from "/src/assets/mercado-financeiro.png";
+import t32 from "/src/assets/mercado-financeiro.png";
 
 const courses = [
   {
