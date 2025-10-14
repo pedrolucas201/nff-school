@@ -32,7 +32,7 @@ export default function Section7({ whatsappNumber = "5581999999999" /* default *
             {/* on mobile: abrir modal. on desktop the CTA inline will be visible */}
             <button
               onClick={() => setOpenModal(true)}
-              className="w-full sm:w-auto transform transition-transform duration-200 hover:scale-105 bg-[#FF3B00] hover:bg-[#ff5722] text-white font-semibold px-6 py-3 rounded-tl-[20px] rounded-br-[20px] text-base sm:text-lg transition-all shadow-lg text-center"
+              className="w-full sm:w-full md:w-[400px] items-center transform transition-transform duration-200 hover:scale-105 bg-[#FF3B00] hover:bg-[#ff5722] text-white font-semibold px-6 py-3 rounded-tl-[20px] rounded-br-[20px] text-base sm:text-lg transition-all shadow-lg text-center"
               aria-expanded={openModal}
             >
               Irei mudar meu futuro
@@ -43,7 +43,7 @@ export default function Section7({ whatsappNumber = "5581999999999" /* default *
         {/* LADO DIREITO - FORMULÁRIO */}
         <div className="w-full lg:w-1/2 flex justify-center">
           {/* Show inline form only on lg and above. On smaller screens, the button opens modal */}
-          <div className="hidden lg:block w-full">
+          <div className="w-full">
             <CTA
               inline
               initialCourse={initialCourse}

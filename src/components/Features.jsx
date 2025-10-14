@@ -41,7 +41,7 @@ export default function Features() {
               role="group"
               aria-label="Serviços oferecidos"
             >
-              <h2 className="font-nasal text-center text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight sm:mb-8">
+              <h2 className="font-nasal text-center text-[1.2rem] sm:text-3xl md:text-4xl font-extrabold tracking-tight sm:mb-8">
                 Te levamos ao novo patamar
               </h2>
 

@@ -79,7 +79,7 @@ export default function CoursesGrid() {
                     <div
                       className={`card-media flex justify-center ${
                         isLast
-                          ? "sm:w-1/2 flex-none items-center justify-center rounded-lg py-4 px-4"
+                          ? "sm:w-1/2 flex-none items-center justify-center rounded-lg pr-12"
                           : "w-full flex-none flex items-center justify-center py-4 px-4"
                       }`}
                     >
@@ -89,8 +89,8 @@ export default function CoursesGrid() {
                         alt={c.title}
                         className={`rounded-lg object-contain h-auto ${
                           isLast
-                            ? "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px] bg-black"
-                            : "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px]"
+                            ? "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[280px] md:max-h-[300px] lg:max-h-[340px]"
+                            : "transform transition-transform duration-200 hover:scale-105 max-w-full max-h-[300px] sm:max-h-[280px] md:max-h-[300px] lg:max-h-[320px]"
                         }`}
                         loading="lazy"
                       />
