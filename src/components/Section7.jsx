@@ -28,15 +28,6 @@ export default function Section7({ whatsappNumber = "5581999999999" /* default *
               <span className="font-bold font-mont">Preencha o formulário</span> e um de
               nossos vendedores entrará em contato com você.
             </p>
-
-            {/* on mobile: abrir modal. on desktop the CTA inline will be visible */}
-            <button
-              onClick={() => setOpenModal(true)}
-              className="w-full sm:w-full md:w-[400px] items-center transform transition-transform duration-200 hover:scale-105 bg-[#FF3B00] hover:bg-[#ff5722] text-white font-semibold px-6 py-3 rounded-tl-[20px] rounded-br-[20px] text-base sm:text-lg transition-all shadow-lg text-center"
-              aria-expanded={openModal}
-            >
-              Irei mudar meu futuro
-            </button>
           </div>
         </Reveal>
 
