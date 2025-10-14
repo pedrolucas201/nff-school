@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import hero from "../assets/bg-hero.svg";
+import hero from "../assets/bg-hero.png";
 import logonff from "../assets/logo-nff.png";
 
 export default function Hero() {

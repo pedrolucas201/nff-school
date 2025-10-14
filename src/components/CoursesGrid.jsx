@@ -114,7 +114,7 @@ export default function CoursesGrid() {
                       </div>
 
                       <div className={`w-[250px] md:w-[300px] ${
-                            isLast ? "lg:pt-8 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-6 lg:pt-8"
+                            isLast ? "lg:pt-2 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-6 lg:pt-8"
                           }`}>
                         <button
                           onClick={() => openForCourse(c.title)}
