@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Reveal from "./Reveal";
 import CTA from "./CTA";
-import bgcourses from "../assets/bg-courses.svg";
+import bgcourses from "../assets/bg-courses.png";
 
 import t11 from "/src/assets/educacao-financeira-infantil.svg";
 import t12 from "/src/assets/educacao-financeira-infantil.svg";
