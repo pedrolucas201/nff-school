@@ -79,7 +79,7 @@ export default function CoursesGrid() {
                     <div
                       className={`card-media flex justify-center ${
                         isLast
-                          ? "sm:w-1/2 flex-none items-center justify-center rounded-lg pr-12"
+                          ? "sm:w-1/2 flex-none items-center justify-center rounded-lg md:pr-12"
                           : "w-full flex-none flex items-center justify-center py-4 px-4"
                       }`}
                     >
