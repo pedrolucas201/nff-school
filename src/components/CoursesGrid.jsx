@@ -105,7 +105,7 @@ export default function CoursesGrid() {
                       <div className="">
                         <h3
                           className={`text-white text-3xl font-semibold mb-2 leading-snug font-nasal ${
-                            isLast ? "pt-14 sm:pt-0 md:pt-0 lg:pt-0" : "pt-14 lg:pt-14"
+                            isLast ? "pt-14 sm:pt-0 md:pt-0 lg:pt-0 text-4xl" : "pt-14 lg:pt-14"
                           }`}
                         >
                           {c.title}
