@@ -17,11 +17,11 @@ export default function About() {
         <Reveal>
           <div className="max-w-7xl mx-auto flex flex-col items-start gap-6">
             <div className="w-full lg:w-2/3 text-white">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 font-nasal">
+              <h2 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 font-nasal">
                 O que somos?
               </h2>
 
-              <p className="text-white text-sm sm:text-base md:text-lg max-w-3xl leading-relaxed font-normal text-wrap break-words">
+              <p className="text-white text-md sm:text-base md:text-lg max-w-3xl leading-relaxed font-normal text-wrap break-words">
                 A NFF Escola de Investimentos nasceu{" "}
                 <span className="text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed text-wrap font-extrabold">
                   com o propósito de democratizar a educação financeira no

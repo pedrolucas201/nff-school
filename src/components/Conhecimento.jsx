@@ -24,12 +24,10 @@ const items = [
 
 export default function Conhecimento() {
   return (
-    // bg branco em mobile, transparente quando a imagem aparecer (md+)
     <section
       id="conhecimento"
       className="relative w-full h-auto bg-white md:bg-transparent overflow-hidden"
     >
-      {/* imagem de fundo: escondida em telas pequenas (mobile) */}
       <img
         src={bgknowledge}
         alt="Knowledge NFF Escola"
@@ -38,7 +36,6 @@ export default function Conhecimento() {
         aria-hidden
       />
 
-      {/* TINTA LARANJA SOBRE O BACKGROUND (leve) - z acima da imagem */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -48,16 +45,14 @@ export default function Conhecimento() {
         }}
       />
 
-      {/* CONTEÚDO (sempre acima) */}
       <div className="relative z-30 max-w-7xl px-6 sm:px-10 py-10 lg:py-12">
         <div className="flex flex-col lg:flex-row items-start gap-8">
-          {/* coluna esquerda: título + grade */}
           <div className="w-full lg:w-7/12">
             <div className="bg-transparent rounded-r-2xl py-2 lg:py-6 px-2 sm:px-4 lg:px-0">
+            <Reveal>
+
               <h2 className="font-nasal text-center text-black text-[21px] sm:text-center sm:text-[30px] md:text-left lg:text-left lg:text-[40px] font-extrabold leading-tight mb-8">
-                {/* primeira linha */}
                 Desde o conhecimento
-                {/* segunda linha forçada em todos os tamanhos; "estamos com você" em laranja */}
                 <span className="block">
                   à ação{" "}
                   <span className="font-nasal text-[#ff5b2e]">
@@ -65,12 +60,8 @@ export default function Conhecimento() {
                   </span>
                 </span>
               </h2>
+              </Reveal>
 
-              {/* GRID responsiva:
-                  - mobile: 2 colunas
-                  - sm: 3 colunas
-                  - md+: 4 colunas (2 linhas x 4 itens)
-              */}
               <Reveal>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-8 items-start">
                 {items.map((it, i) => (
@@ -101,12 +92,10 @@ export default function Conhecimento() {
             </div>
           </div>
 
-          {/* espaço direito para evitar sobreposição com ilustração */}
           <div className="hidden lg:block lg:flex-1" />
         </div>
       </div>
 
-      {/* pequeno separador inferior, se preciso */}
       <div
         className="absolute left-0 right-0 bottom-0 h-8 pointer-events-none"
         style={{ zIndex: 15 }}

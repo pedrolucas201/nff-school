@@ -99,13 +99,13 @@ export default function CoursesGrid() {
                     {/* texto */}
                     <div
                       className={`card-body p-6 flex-1 flex flex-col justify-between ${
-                        isLast ? "sm:pl-10 sm:text-left text-center" : ""
+                        isLast ? "sm:text-left text-center" : ""
                       }`}
                     >
                       <div className="">
                         <h3
-                          className={`text-white text-2xl font-semibold mb-2 leading-snug font-nasal ${
-                            isLast ? "pt-14 lg:pt-8 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-14 lg:pt-14"
+                          className={`text-white text-3xl font-semibold mb-2 leading-snug font-nasal ${
+                            isLast ? "pt-14 sm:pt-0 md:pt-0 lg:pt-0" : "pt-14 lg:pt-14"
                           }`}
                         >
                           {c.title}
@@ -114,7 +114,7 @@ export default function CoursesGrid() {
                       </div>
 
                       <div className={`w-[250px] md:w-[300px] ${
-                            isLast ? "lg:pt-2 sm:pt-0 md:pt-0 lg:pt-0 " : "pt-6 lg:pt-8"
+                            isLast ? "sm:pt-0 md:pt-0 lg:pt-0 " : "pt-4 lg:pt-4"
                           }`}>
                         <button
                           onClick={() => openForCourse(c.title)}

@@ -18,7 +18,7 @@ export default function Reveal({children, className = '', threshold = 0.12}) {
     return () => obs.disconnect();
   }, [threshold]);
   return (
-    <div ref={ref} className={`reveal ${inView ? 'in-view' : ''} ${className}`}>
+    <div ref={ref} className={`reveal ${inView ? 'in-view' : ''} ${className}`} style={{ ['--delay']: '440ms' }}>
       {children}
     </div>
   );

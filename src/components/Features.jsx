@@ -4,6 +4,7 @@ import man from '../assets/feat-man.png'
 import iconbolsa from '../assets/bolsa-de-valores-icon.png'
 import icontrader from '../assets/day-trader-icon.png'
 import iconmentalidade from '../assets/mentalidade-icon.png'
+import Reveal from './Reveal'
 
 export default function Features() {
   return (
@@ -21,6 +22,7 @@ export default function Features() {
       <div className="absolute inset-0 bg-[rgba(255,110,30,0.2)] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-5 sm:py-14 lg:py-20">
+      <Reveal>
         <div className="flex flex-col lg:flex-row items-center gap-[14px]">
 
           <div className="w-full lg:w-5/12">
@@ -34,7 +36,6 @@ export default function Features() {
               </div>
             </div>
           </div>
-
           <div className="w-full sm:w-100 md:w-10/12 lg:w-7/12">
             <div
               className="rounded-xl h-full relative lg:-ml-8 lg:pl-8 z-20 bg-gradient-to-r from-[rgba(255,140,60,0.95)] to-[rgba(255,110,30,0.88)] backdrop-blur-sm sm:rounded-none md:rounded-none lg:rounded-none lg:rounded-r-2xl sm:rounded-r-2xl md:rounded-r-2xl py-5 md:py-10 px-6 sm:px-10 shadow-xl flex flex-col items-center text-white"
@@ -71,6 +72,7 @@ export default function Features() {
           </div>
 
         </div>
+        </Reveal>
       </div>
     </section>
   )

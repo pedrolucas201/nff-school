@@ -25,7 +25,7 @@ export default function Hero() {
 
       {/* conteúdo */}
       <div className="absolute inset-0 flex items-center justify-center z-20">
-        <div className="container mx-auto px-6 flex flex-col items-start text-left md:items-start md:text-left">
+        <div className="container mx-auto px-6 flex flex-col items-center text-left sm:items-start sm:text-left">
           <Reveal>
             <img
               src={logonff}
@@ -51,8 +51,8 @@ export default function Hero() {
           </Reveal>
 
           <a
-            href="#courses"
-            className="w-[320px] sm:w-[300px] md:w-[365px] lg:w-[440px] mt-6 btn btn-primary px-10 py-4 text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px]"
+            href="#section7"
+            className="w-[340px] sm:w-[300px] md:w-[365px] lg:w-[440px] mt-6 btn btn-primary px-10 py-4 text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px]"
           >
             Quero mudar meu futuro
           </a>
