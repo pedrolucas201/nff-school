@@ -1,5 +1,5 @@
 import React from "react";
-import bgknowledge from "../assets/bg-knowledge.svg";
+import bgknowledge from "../assets/bg-knowledge.png";
 
 import iconEducacao from "../assets/icone-educacao-financeira.png";
 import iconTrader from "../assets/icone-day-trader.png";

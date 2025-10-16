@@ -98,7 +98,7 @@ export default function CoursesGrid() {
 
                     {/* texto */}
                     <div
-                      className={`card-body p-6 flex-1 flex flex-col justify-between ${
+                      className={`card-body flex-1 flex flex-col justify-between ${
                         isLast ? "sm:text-left text-center" : ""
                       }`}
                     >
@@ -110,7 +110,7 @@ export default function CoursesGrid() {
                         >
                           {c.title}
                         </h3>
-                        <p className="text-[18px] text-sm font-normal text-white/80">{c.desc}</p>
+                        <p className="text-[18px] text-center sm:text-left text-sm font-normal text-white/80">{c.desc}</p>
                       </div>
 
                       <div className={`w-[250px] md:w-[300px] ${
