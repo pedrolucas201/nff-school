@@ -220,7 +220,7 @@ export default function CTA({
         <button
           type="submit"
           disabled={submitting}
-          className="px-4 py-2 rounded-md bg-orange-600 text-white text-sm font-medium hover:bg-orange-700 disabled:opacity-60 font-nasal"
+          className="btn btn-primary pulse text-sm font-medium disabled:opacity-60 font-nasal"
         >
           {submitting ? "Abrindo WhatsApp..." : "Enviar e abrir WhatsApp"}
         </button>

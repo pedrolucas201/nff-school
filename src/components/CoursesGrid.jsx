@@ -118,7 +118,7 @@ export default function CoursesGrid() {
                           }`}>
                         <button
                           onClick={() => openForCourse(c.title)}
-                          className="w-full btn btn-primary text-sm"
+                          className="w-full btn btn-primary pulse text-sm"
                           aria-label={`Quero entender mais sobre ${c.title}`}
                         >
                           Quero entender mais

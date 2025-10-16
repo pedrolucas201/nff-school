@@ -35,7 +35,7 @@ export default function Hero() {
 
             <h1
               className={`text-white font-nasal font-extrabold leading-tight tracking-tight whitespace-pre-line
-                          text-[40px] sm:text-[36px] md:text-[44px] lg:text-[52px]`}
+                          text-[36px] sm:text-[36px] md:text-[44px] lg:text-[52px]`}
             >
               O conhecimento{"\n"}
               abre portas{"\n"}
@@ -52,7 +52,7 @@ export default function Hero() {
 
           <a
             href="#section7"
-            className="w-[340px] sm:w-[300px] md:w-[365px] lg:w-[440px] mt-6 btn btn-primary px-10 py-4 text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px]"
+            className="w-[300px] sm:w-[300px] md:w-[365px] lg:w-[440px] mt-6 btn btn-primary pulse px-10 py-4 text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px]"
           >
             Quero mudar meu futuro
           </a>
