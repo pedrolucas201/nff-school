@@ -112,7 +112,7 @@ export default function CoursesGrid() {
                         </h3>
                         <p className="text-[18px] text-center sm:text-left text-sm font-normal text-white/80">{c.desc}</p>
                       </div>
-
+                        <Reveal>
                       <div className={`w-[250px] md:w-[300px] ${
                             isLast ? "sm:pt-0 md:pt-0 lg:pt-0 " : "pt-4 lg:pt-4"
                           }`}>
@@ -124,6 +124,7 @@ export default function CoursesGrid() {
                           Quero entender mais
                         </button>
                       </div>
+                      </Reveal>
                     </div>
                   </article>
                 </Reveal>
