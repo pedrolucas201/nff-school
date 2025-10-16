@@ -49,13 +49,14 @@ export default function Hero() {
               </span>
             </h1>
           </Reveal>
-
+          <Reveal>
           <a
             href="#section7"
             className="w-[300px] sm:w-[300px] md:w-[365px] lg:w-[440px] mt-6 btn btn-primary pulse px-10 py-4 text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px]"
           >
             Quero mudar meu futuro
           </a>
+          </Reveal>
         </div>
       </div>
     </header>
