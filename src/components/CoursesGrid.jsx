@@ -77,9 +77,9 @@ export default function CoursesGrid() {
                   >
                     {/* imagem */}
                     <div
-                      className={`card-media flex justify-center ${
+                      className={`card-media flex ${
                         isLast
-                          ? "sm:w-1/2 flex-none items-center justify-center rounded-lg md:pr-12"
+                          ? "sm:w-[45%] flex-none items-center sm:items-baseline md:items-center justify-center md:justify-end rounded-lg"
                           : "w-full flex-none flex items-center justify-center py-4 px-4"
                       }`}
                     >
@@ -98,23 +98,27 @@ export default function CoursesGrid() {
 
                     {/* texto */}
                     <div
-                      className={`card-body flex-1 flex flex-col justify-between ${
-                        isLast ? "sm:text-left text-center" : ""
+                      className={`flex-1 flex flex-col ${
+                        isLast ? "sm:text-left text-center flex flex-col px-10 items-center md:items-start justify-start" : "card-body justify-between"
                       }`}
                     >
                       <div className="">
                         <h3
                           className={`text-white text-3xl font-semibold mb-2 leading-snug font-nasal ${
-                            isLast ? "pt-14 sm:pt-0 md:pt-0 lg:pt-0 text-4xl" : "pt-14 lg:pt-14"
+                            isLast ? "pt-16 sm:pt-0 md:pt-0 lg:pt-0 text-4xl" : "pt-14 lg:pt-14"
                           }`}
                         >
                           {c.title}
                         </h3>
-                        <p className="text-[18px] text-center sm:text-left text-sm font-normal text-white/80">{c.desc}</p>
+                        <p className={`text-center sm:text-left text-sm font-normal text-white/80 ${
+                          isLast ? "sm:text-left max-w-[350px]" : ""
+                        }`}
+                        >
+                        {c.desc}</p>
                       </div>
-                        <Reveal>
-                      <div className={`w-[250px] md:w-[300px] ${
-                            isLast ? "sm:pt-0 md:pt-0 lg:pt-0 " : "pt-4 lg:pt-4"
+
+                      <div className={`w-[250px] sm:w-[250px] md:w-[350px] ${
+                            isLast ? "ml-4 sm:ml-0 pt-4" : "pt-4"
                           }`}>
                         <button
                           onClick={() => openForCourse(c.title)}
@@ -124,7 +128,6 @@ export default function CoursesGrid() {
                           Quero entender mais
                         </button>
                       </div>
-                      </Reveal>
                     </div>
                   </article>
                 </Reveal>
