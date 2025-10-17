@@ -16,7 +16,7 @@ export default function Section7({ whatsappNumber = "5581999999999" /* default *
         backgroundImage: `url(${bgsection})`,
       }}
     >
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 py-20 sm:py-10 md:py-20 lg:py-28 px-4">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between md:gap-10 py-20 sm:py-10 md:py-20 lg:py-28 px-4">
         {/* LADO ESQUERDO - TEXTO */}
         <Reveal>
           <div className="flex flex-col items-start text-white max-w-xl">
