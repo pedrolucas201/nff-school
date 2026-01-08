@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 import bgsection from "../assets/bg-section7.svg";
 import CTA from "./CTA";
 
-export default function Section7({ whatsappNumber = "5581999999999" /* default */ }) {
+export default function Section7({ whatsappNumber = "5581999043659" /* default */ }) {
   const [openModal, setOpenModal] = useState(false);
   const initialCourse = ""; // se quiser prefiltrar, coloca aqui ou passe por props
 
