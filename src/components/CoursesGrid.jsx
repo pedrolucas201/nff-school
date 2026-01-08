@@ -31,7 +31,7 @@ const courses = [
   },
 ];
 
-const WHATSAPP_NUMBER = "5581993259534";
+const WHATSAPP_NUMBER = "5581999043659";
 
 export default function CoursesGrid() {
   const [modalOpen, setModalOpen] = useState(false);

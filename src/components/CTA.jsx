@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
  * - open: boolean (define se é modal; se falso, renderiza inline)
  * - onClose: () => void
  * - initialCourse: string (opcional)
- * - whatsappNumber: string -> formato internacional, ex: "5581993259534"
+ * - whatsappNumber: string -> formato internacional, ex: "5581999043659"
  * - inline: boolean -> se true, renderiza dentro da página (sem backdrop)
  */
 export default function CTA({
@@ -197,7 +197,7 @@ export default function CTA({
           value={phone}
           onChange={handlePhoneChange}
           className="mt-1 block w-full rounded-md border-gray-300 px-3 py-2 shadow-sm focus:ring-2 focus:ring-orange-400 text-black"
-          placeholder="Ex: (81) 99325-9534"
+          placeholder="Ex: (81) 99904-3659"
           required
           inputMode="tel"
           maxLength={18} // suficiente para máscara "(DD) 99999-9999"
